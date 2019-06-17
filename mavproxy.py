@@ -27,12 +27,12 @@ except ImportError:
 from builtins import input
 
 from MAVProxy.modules.lib import textconsole
-from MAVProxy.modules.lib import rline
-from MAVProxy.modules.lib import mp_module
-from MAVProxy.modules.lib import dumpstacks
-from MAVProxy.modules.lib import mp_substitute
-from MAVProxy.modules.lib import multiproc
-from MAVProxy.modules.mavproxy_link import preferred_ports
+from  MAVProxy.modules.lib import rline
+from  MAVProxy.modules.lib import mp_module
+from  MAVProxy.modules.lib import dumpstacks
+from  MAVProxy.modules.lib import mp_substitute
+from  MAVProxy.modules.lib import multiproc
+from  MAVProxy.modules.mavproxy_link import preferred_ports
 
 # adding all this allows pyinstaller to build a working windows executable
 # note that using --hidden-import does not work for these modules
