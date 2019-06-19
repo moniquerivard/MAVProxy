@@ -121,6 +121,6 @@ class SensorsModule(mp_module.MPModule):
             self.sensors_state.last_watch = time.time()
             self.cmd_sensors([])
 
-def init(mpstate):
-    '''initialise module'''
-    return SensorsModule(mpstate)
+    def init(mpstate):
+        '''initialise module'''
+        return SensorsModule(mpstate)

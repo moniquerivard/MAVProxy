@@ -57,6 +57,7 @@ class ConsoleModule(mp_module.MPModule):
         mpstate.console.set_status('AspdError', 'AspdError --', row=3)
         mpstate.console.set_status('FlightTime', 'FlightTime --', row=3)
         mpstate.console.set_status('ETR', 'ETR --', row=3)
+        mpstate.console.set_status('EngChange', 'EngChange --', row =2)
 
         mpstate.console.ElevationMap = mp_elevation.ElevationModel()
 
@@ -293,6 +294,7 @@ class ConsoleModule(mp_module.MPModule):
             self.console.set_status('Alt', 'Alt %s' % self.height_string(rel_alt))
             self.console.set_status('AirSpeed', 'AirSpeed %s' % self.speed_string(msg.airspeed))
             self.console.set_status('GPSSpeed', 'GPSSpeed %s' % self.speed_string(msg.groundspeed))
+            self.console.set_status('EngChange', 'EngChange %s' % self.speed_string(msg.airspeed))
             self.console.set_status('Thr', 'Thr %u' % msg.throttle)
             t = time.localtime(msg._timestamp)
             flying = False
